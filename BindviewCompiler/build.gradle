@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':BindViewAnnotation')
+    // 用于生成Java文件的库
+    implementation 'com.squareup:javapoet:1.11.1'
+    implementation 'com.google.auto.service:auto-service:1.0-rc6'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+   // implementation 'com.google.auto.service:auto-service:1.0-rc6'
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
